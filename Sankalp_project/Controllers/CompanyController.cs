@@ -42,7 +42,7 @@ namespace Sankalp_project.Controllers
             if(res!=null) 
             {
 
-                var security = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]);
+                var security = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
                 var credentials = new SigningCredentials(security, SecurityAlgorithms.HmacSha256);
                 var Payload = new[]
                 {
